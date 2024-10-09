@@ -38,7 +38,7 @@ public class UserResource {
     public ResponseEntity<UserDTO> findById(@PathVariable String id){
     	User obj = service.findById(id);
     	return ResponseEntity.ok().body(new UserDTO(obj));
-    }    
+    }
     
     @PostMapping
     public ResponseEntity<Void> insert(@RequestBody UserDTO objDto) {
